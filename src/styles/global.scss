@@ -1,0 +1,221 @@
+
+$mobile-breakpoint: 768px;
+
+$border: 2px solid red;
+
+$background_color:#242424;
+$text_color: #f3f3f3;
+$footer_text: #979797;
+
+$mobile_padding: 1rem;
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $text_color;
+    ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid white;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+            color: $text_color;
+        }
+    }
+}
+
+main {
+    border: $border;
+    color: $background_color;
+}
+
+.section_padding_mobile {
+    padding: $mobile_padding
+}
+
+#main_header,
+#main_footer {
+    background-color: $background_color;
+    color: $text_color;
+}
+
+#main_header {
+    display: flex;
+    background-color: $background_color;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main_navigation {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    transform: translateX(-150%);
+    background-color: $background_color;
+    color: $text_color;
+    transition: transform .75s ease;
+    border-right: 2px solid $footer_text;
+    &.menu-active {
+        transform: translateX(0);
+        transition: transform .75s ease;
+    }
+    ul {
+        list-style-type: none;
+        padding: 2rem;
+    }
+    li {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid white;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    @media screen and (min-width: $mobile-breakpoint) {
+        position: relative;
+        transform: none;
+        transition: none;
+        background-color: unset;
+        ul {
+            padding: 1rem;
+        }
+        li {
+            display: inline-block;
+            padding: 1rem;
+            border: none;
+        }
+    }
+}
+
+#main_footer {
+
+    #brand_footer > p, 
+    .icon_box__icon_wrapper,
+    .icon_box__title,
+    #copyright {
+        color: $footer_text
+    }
+
+    #brand_footer > p { font-style: italic; }
+
+    .flex_parent {
+        padding: 3rem 0;
+        .flex_child {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .icon_box__box_container {
+        // border: $border;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .icon_box__content,
+        .icon_box__icon_wrapper {
+            text-align: center;
+            flex-basis: 100%;
+        }
+        .icon_box__icon_wrapper {
+            font-size: 1.5rem;
+            color: $footer_text;
+        }
+
+        .fa_icon {
+            font-size: 1.5rem;
+            border: 1px solid $footer_text;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+
+        @media screen and (min-width: $mobile-breakpoint) {
+            flex-wrap: nowrap;
+            align-items: center;
+            .icon_box__icon_wrapper {
+                flex: 0 1 50%;
+                text-align: center;
+                padding: 1rem;
+            }
+            .icon_box__content {
+                text-align: unset;
+            }
+        }
+    }
+    #main_footer_nav {
+        text-align: center;
+        color: $footer_text;
+        text-transform: uppercase;
+        ul {
+            padding: 0 1rem;
+            li {
+                border-bottom: none;
+            }
+        }
+    }
+    #copyright {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: .85rem;
+    }
+    @media screen and (min-width: $mobile-breakpoint) {
+        .flex_parent {
+            display: flex;
+            justify-content: space-between;
+            > .flex_child {
+                // border: 1px solid green;
+                flex-basis: 30%;
+                &:not(:first-of-type) {
+                    border-left: 2px solid $footer_text;
+                }
+            }
+        }
+        
+    }
+}
+
+.banner {
+    border: 2px solid green;
+    text-align: center;
+}
+
+#mobile_nav_btn {
+    @media screen and (min-width: $mobile-breakpoint) {
+        display: none;
+    }
+}
+
+
+/**
+ * Helper Classes 
+ */
+
+/* accessibility */
+.screen_reader_text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+.hidden {display:none;}
