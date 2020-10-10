@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import siteLogo from "../images/bristol_hair_logo.png";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faClock, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 export default function Footer () {
     return (
@@ -17,7 +17,7 @@ export default function Footer () {
                     <div className="icon_box__box_container">
                         <div className="icon_box__icon_wrapper">
                             {/* <i className="icon_box__icon"></i> */}
-                            {/* <FontAwesomeIcon icon={faPhone} className="fa_icon" /> */}
+                            <FontAwesomeIcon icon={faPhone} className="fa_icon" />
                         </div>
                         <div className="icon_box__content">
                             <h3 className="icon_box__title">Call Us</h3>
@@ -26,7 +26,7 @@ export default function Footer () {
                     </div>
                     <div className="icon_box__box_container">
                         <div className="icon_box__icon_wrapper">
-                            {/* <FontAwesomeIcon icon={faClock} className="fa_icon" /> */}
+                            <FontAwesomeIcon icon={faClock} className="fa_icon" />
                         </div>
                         <div className="icon_box__content">
                             <h3 className="icon_box__title">Our Hours</h3>
@@ -37,7 +37,7 @@ export default function Footer () {
                     <div className="icon_box__box_container">
                         <div className="icon_box__icon_wrapper">
                             <i className="icon_box__icon"></i>
-                            {/* <FontAwesomeIcon icon={faMapMarkerAlt} className="fa_icon" /> */}
+                            <FontAwesomeIcon icon={faMapMarkerAlt} className="fa_icon" />
     
                         </div>
                         <div className="icon_box__content">

@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     color: $text_color;
+    line-height: 1.33;
     ul {
         padding: 0;
         list-style-type: none;
@@ -121,10 +122,10 @@ main {
     }
 
     .icon_box__box_container {
-        // border: $border;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 1rem;
         .icon_box__content,
         .icon_box__icon_wrapper {
             text-align: center;
@@ -134,7 +135,6 @@ main {
             font-size: 1.5rem;
             color: $footer_text;
         }
-
         .fa_icon {
             font-size: 1.5rem;
             border: 1px solid $footer_text;
