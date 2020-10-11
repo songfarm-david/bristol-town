@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-// import "../style/nav.scss"
-
 const Nav = ({ menuToggleClass }) => (
     <nav role="navigation" id="main_navigation" className={ menuToggleClass }>
         <h2 className="screen_reader_text">Main Navigation</h2>

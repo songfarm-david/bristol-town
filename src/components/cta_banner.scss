@@ -1,0 +1,14 @@
+@import "../styles/global.scss";
+
+.cta_banner {
+    background-color: $background_color;
+    color: $text_color;
+    padding: $section_padding;
+
+    .cta_banner__headline {
+        text-transform: uppercase;
+    }
+    .theme_button { 
+        border-color: $text_color;
+    }
+}

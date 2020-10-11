@@ -11,13 +11,17 @@ export default function Header() {
     console.log(isOpen);
     return (
         <header id={"main_header"}>
-            <Link to="/">
-                <img src={siteLogo} alt={"Bristol Town Hair logo"} />
-                <h1 className="screen_reader_text">Bristol Town Hair</h1>
-            </Link>
-            <div onClick={() => toggleIsOpen( isOpen => !isOpen )}>
-                <Hamburger isActive={ isOpen } />
-                <Nav menuToggleClass={( isOpen ) ? 'menu-active' : ""} />
+            <div className={"section_inner"}>
+                <div className={"flex_inner"}>
+                    <Link to="/">
+                        <img src={siteLogo} alt={"Bristol Town Hair logo"} />
+                        <h1 className="screen_reader_text">Bristol Town Hair</h1>
+                    </Link>
+                    <div onClick={() => toggleIsOpen( isOpen => !isOpen )}>
+                        <Hamburger isActive={ isOpen } />
+                        <Nav menuToggleClass={( isOpen ) ? 'menu-active' : ""} />
+                    </div>
+                </div>
             </div>
         </header>
     );

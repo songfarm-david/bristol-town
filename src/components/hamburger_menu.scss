@@ -5,19 +5,18 @@ $hamburger-layer-color: $text-color;
 /* import hamburger styles */
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
-#menuToggleBtn {
+#mobile_nav_btn {
     padding: .5rem;
     align-self: center;
     margin-left: 1rem;
     &:hover,
     &:focus {
         cursor: pointer;
-        outline-width: 0px;
     }
 }
 
 @media screen and (min-width: $mobile-breakpoint) {
-    #menuToggleBtn {
+    #mobile_nav_btn {
         display: none;
     }
 }

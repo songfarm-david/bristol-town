@@ -1,13 +1,16 @@
 
-$mobile-breakpoint: 768px;
+$mobile_breakpoint: 768px;
+$content_width: 64rem;
 
 $border: 2px solid red;
 
 $background_color:#242424;
 $text_color: #f3f3f3;
 $footer_text: #979797;
+$footer_text_alpha: rgba(151,151,151,.18);
 
-$mobile_padding: 1rem;
+
+$section_padding: 1rem 1rem 3rem;
 
 body {
     margin: 0;
@@ -40,10 +43,26 @@ body {
 main {
     border: $border;
     color: $background_color;
+    padding: $section_padding;
+}
+
+#main_header,
+main,
+#main_footer {
+    
+}
+
+@media screen and (min-width: $mobile_breakpoint) {
+    .section_inner {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $content_width;
+    }
+
 }
 
 .section_padding_mobile {
-    padding: $mobile_padding
+    padding: $section_padding
 }
 
 #main_header,
@@ -53,11 +72,14 @@ main {
 }
 
 #main_header {
-    display: flex;
     background-color: $background_color;
     padding: 1rem;
-    align-items: center;
-    justify-content: space-between;
+    .flex_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
 }
 
 #main_navigation {
@@ -87,11 +109,12 @@ main {
             text-decoration: none;
         }
     }
-    @media screen and (min-width: $mobile-breakpoint) {
+    @media screen and (min-width: $mobile_breakpoint) {
         position: relative;
         transform: none;
         transition: none;
         background-color: unset;
+        border-right: none;
         ul {
             padding: 1rem;
         }
@@ -104,6 +127,8 @@ main {
 }
 
 #main_footer {
+
+    padding: 1rem;
 
     #brand_footer > p, 
     .icon_box__icon_wrapper,
@@ -141,8 +166,7 @@ main {
             border-radius: 50%;
             padding: 1rem;
         }
-
-        @media screen and (min-width: $mobile-breakpoint) {
+        @media screen and (min-width: $mobile_breakpoint) {
             flex-wrap: nowrap;
             align-items: center;
             .icon_box__icon_wrapper {
@@ -155,6 +179,7 @@ main {
             }
         }
     }
+
     #main_footer_nav {
         text-align: center;
         color: $footer_text;
@@ -172,7 +197,7 @@ main {
         margin-top: 1rem;
         font-size: .85rem;
     }
-    @media screen and (min-width: $mobile-breakpoint) {
+    @media screen and (min-width: $mobile_breakpoint) {
         .flex_parent {
             display: flex;
             justify-content: space-between;
@@ -180,7 +205,7 @@ main {
                 // border: 1px solid green;
                 flex-basis: 30%;
                 &:not(:first-of-type) {
-                    border-left: 2px solid $footer_text;
+                    border-left: 1px solid $footer_text_alpha;
                 }
             }
         }
@@ -192,13 +217,6 @@ main {
     border: 2px solid green;
     text-align: center;
 }
-
-#mobile_nav_btn {
-    @media screen and (min-width: $mobile-breakpoint) {
-        display: none;
-    }
-}
-
 
 /**
  * Helper Classes 

@@ -1,0 +1,16 @@
+@import "../styles/global.scss";
+
+#brand_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .fixed_img_container {
+        max-width: 14rem;
+        flex-basis: 30%;
+        margin: 1rem;
+        .fixed_img_container__img {
+            // border: $border;
+            // padding: 1rem;
+        }
+    }
+}
