@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ThemeButton from "./theme_button"
+import ThemeButton from "../UI/theme_button"
 
 import "./cta_banner.scss";
 

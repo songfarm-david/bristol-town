@@ -1,7 +1,7 @@
 import React from "react"
-
+import Map from "../components/UI/map"
 import Layout from "../components/layout"
-import ThemeButton from "../components/theme/theme_button"
+import ThemeButton from "../components/UI/theme_button"
 
 import "../styles/form.scss"
 
@@ -12,7 +12,6 @@ export default function Services({location}) {
             <p className="text_italic">Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
             <div className="grid_section">
                 <section>
-                    
                     <h3>Make an appointment</h3>
                     <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
@@ -35,6 +34,7 @@ export default function Services({location}) {
                 <article className="center">
                     <h3>Call us for more information</h3>
                     <p className="h2" style={{marginTop:'0'}}>(250) 477-3098</p>
+                    <Map />
                 </article>
             </div>
         </Layout>

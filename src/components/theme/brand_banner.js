@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "./brand_banner.scss"
-import ThemeButton from "./theme_button"
+import ThemeButton from "../UI/theme_button"
 
 export default function BrandBanner() {
     const brandImage = useStaticQuery(

@@ -1,10 +1,11 @@
 
 $mobile_breakpoint: 768px;
-$content_width: 64rem;
+$content_width: 72rem;
+$main_content_width: 64rem;
 
 $border: 2px solid red;
 
-$background_color:#242424;
+$background_color:#1f1f1f;
 $text_color: #f3f3f3;
 $footer_text: #979797;
 $footer_text_alpha: rgba(151,151,151,.18);
@@ -15,7 +16,12 @@ $section_padding: 1rem 1rem 3rem;
 $sans_serif_font: 'Raleway', 'Arial', sans-serif;
 $serif_font: 'Lora', 'Times New Roman', serif;
 
-$font_small: .9rem;
+$h1_header: 5.063rem;
+$h2_header: 3.375rem;
+$h3_header: 2.25rem;
+$font_larger: 1.5rem;
+$font_reg: 1rem;
+$font_small: 0.667rem;
 
 *:not(svg) {
     box-sizing: border-box;
@@ -27,7 +33,7 @@ body {
     color: $text_color;
     line-height: 1.33;
     font-family: $serif_font;
-    font-size: 1.1rem;
+    font-size: 100%;
     ul {
         padding: 0;
         list-style-type: none;
@@ -55,7 +61,11 @@ body {
 main {
     color: $background_color;
     padding: $section_padding;
-    margin: 1rem 0;
+    margin: 1rem auto 4rem;
+    max-width: $main_content_width;
+    p {
+        font-size: $font_larger;
+    }
 }
 
 h1, h2, h3 {
@@ -64,13 +74,17 @@ h1, h2, h3 {
 }
 
 h1 {
-
+    font-size: $h1_header;
 }
 
 h2,
 .h2 {
-    font-size: 3rem;
-    font-family: $sans_serif_font;
+    font-size: $h2_header;
+}
+
+h3,
+.h3 {
+    font-size: $h3_header;
 }
 
 @media screen and (min-width: $mobile_breakpoint) {
@@ -154,6 +168,10 @@ h2,
 
     padding: 1rem;
 
+    icon_box__wrapper {
+        font-family: $sans_serif_font;
+    }
+
     #brand_footer > p, 
     .icon_box__icon_wrapper,
     .icon_box__title,
@@ -162,14 +180,13 @@ h2,
     }
 
     .icon_box__title {
-        font-family: $sans_serif_font;
         text-transform: uppercase;
         font-weight: lighter;
         font-size: $font_small;
     }
 
     .icon_box__description {
-        font-family: $serif_font;
+        font-family: $sans_serif_font;
         font-weight: bold;
         letter-spacing: 1px;
     }

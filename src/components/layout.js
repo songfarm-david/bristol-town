@@ -8,7 +8,7 @@ import Footer from "./footer"
 import "../styles/global.scss"
 
 export default function Layout ({ children, page, pageTitle }) {
-    console.log(page);
+
     return (
         <>
             <Header />

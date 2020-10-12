@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import ThemeButton from "../components/theme/theme_button"
+import ThemeButton from "../components/UI/theme_button"
 import BrandBanner from "../components/theme/brand_banner"
 
 export default function Home({location}) {
-    console.log(location);
+
     return (
         <Layout page={location} pageTitle={"Welcome to Bristol Town"}>
             <section className={"grid_section"}>

@@ -5,7 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+    siteMetadata: {
+        title: "Bristol Town Hair Fashions",
+        description: "We Style Your Hair With Years of Experience",
+    },
+  
   plugins: [
         `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`, 
