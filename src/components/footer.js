@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+
 import siteLogo from "../images/bristol_hair_logo.png";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons'
 
@@ -53,6 +55,7 @@ export default function Footer () {
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/services">Services</Link></li>
+                            <li><a href="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank">Virtual Tour</a></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>

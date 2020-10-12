@@ -1,0 +1,59 @@
+@import "../../styles/global.scss";
+
+.theme_button {
+    max-width: 20rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    background-color: $background_color;
+    color: $text_color;
+    border: none;
+    margin-bottom: 1rem;
+    &.inverted {
+        background-color: unset;
+        color: $background_color;
+        > a {
+            border: 1px solid #fff;
+            &:hover,
+            &:focus {
+                color: inherit;
+                background-color: unset;
+                border: 1px solid $background_color;
+            }
+            &:after {
+                content: '\003E';
+                display: inline-block;
+                margin-left: 1rem;
+            }
+        }
+    }
+    &.outline {
+        border: 1px solid $text_color;
+        transition: border-color .25s;
+        &:hover,
+        &:focus {
+            border-color: $footer_text;
+        }
+        > a {
+            transition: color .25s;
+            &:hover,
+            &:focus {
+                color: $footer_text;
+                background-color: unset;
+            }
+        }
+    }
+    &.center {
+        display: block;
+        margin: 0 auto;
+    }
+    > a {
+        display: block;
+        padding: 1rem;
+        transition: background-color .25s;
+        &:hover {
+            background-color: $theme_color;
+        }
+    }
+}

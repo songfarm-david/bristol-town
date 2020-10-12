@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Link } from "gatsby"
 
 import Nav from "./nav"
-import Hamburger from "./hamburger_menu"
+import Hamburger from "./theme/hamburger_menu"
 import siteLogo from "../images/bristol_hair_logo.png";
 
 export default function Header() {
     // Declare a new state variable, which we'll call "count"
     const [isOpen, toggleIsOpen] = useState(false);
-    console.log(isOpen);
+
     return (
         <header id={"main_header"}>
             <div className={"section_inner"}>

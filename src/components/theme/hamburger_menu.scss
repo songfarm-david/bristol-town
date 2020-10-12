@@ -1,9 +1,9 @@
-@import "../styles/global.scss";
+@import "../../styles/global.scss";
 
 $hamburger-layer-color: $text-color;
 
 /* import hamburger styles */
-@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 #mobile_nav_btn {
     padding: .5rem;

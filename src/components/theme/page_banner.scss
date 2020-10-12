@@ -1,0 +1,26 @@
+@import "../../styles/global.scss";
+
+#page_banner {
+    background-color: $background_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../images/services.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .page_banner__headline {
+        text-align: center;
+        color: $text_color;
+        margin: 0;
+        text-transform: uppercase;
+        padding: 0 1rem;
+    }
+    &.full_height, &.half_height {
+        height: 50vh;
+    }
+    @media screen and (min-width: $mobile-breakpoint) {
+        &.full_height {
+            height: 100vh;
+        }
+    }
+}
