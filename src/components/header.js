@@ -14,7 +14,6 @@ export default function Header() {
     const [isFloatingHeader, toggleFloatingHeader] = useState(false)
 
     useEffect(() => {
-        console.log(window.scrollY);
         const testScroll = () => {
             const sticky = (window.scrollY > 200) ? 
             toggleFloatingHeader(true)  : 
@@ -25,7 +24,6 @@ export default function Header() {
 
     return (
         <header id={"main_header"} className={(isFloatingHeader) ? "floating_header" : ""}>
-            <span className="hidden" id="top"></span>
             <div className={"section_inner"}>
                 <div className={"flex_inner"}>
                     <Link to="/">
