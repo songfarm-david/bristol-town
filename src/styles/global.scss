@@ -100,22 +100,13 @@ h3,
     padding: $section_padding
 }
 
-#main_header,
-#main_footer {
-    background-color: $background_color;
-    color: $text_color;
-}
+// #main_header,
+// #main_footer {
+//     background-color: $background_color;
+//     color: $text_color;
+// }
 
-#main_header {
-    background-color: $background_color;
-    padding: 1rem;
-    .flex_inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-    }
-}
+
 
 #main_navigation {
     position: absolute;
@@ -141,10 +132,17 @@ h3,
     li {
         display: block;
         padding: 1rem;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $footer_text_alpha;
         a {
             color: inherit;
             text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px $background_color;
+            &:hover,
+            &:focus {
+                color: $footer_text;
+            }
         }
     }
     @media screen and (min-width: $mobile_breakpoint) {
@@ -165,9 +163,9 @@ h3,
 }
 
 #main_footer {
-
+    background-color: $background_color;
+    color: $text_color;
     padding: 1rem;
-
     icon_box__wrapper {
         font-family: $sans_serif_font;
     }
