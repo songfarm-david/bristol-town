@@ -1,0 +1,27 @@
+@import "./global.scss";
+
+form {
+    font-family: $sans_serif_font;
+    margin-bottom: 3rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    .form_label, input, textarea {
+        width: 100%;
+        display: block;
+        input {
+            font-size: inherit;
+            padding: .25rem;
+        }
+    }
+    label {
+        font-style: italic;
+    }
+    label, input, textarea {
+        margin-bottom: 1rem;
+    }
+    input, textarea {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 1px;
+    }
+}

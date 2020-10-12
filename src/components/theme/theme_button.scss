@@ -10,6 +10,7 @@
     color: $text_color;
     border: none;
     margin-bottom: 1rem;
+    font-family: $sans_serif_font;
     &.inverted {
         background-color: unset;
         color: $background_color;
