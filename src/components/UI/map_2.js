@@ -10,7 +10,7 @@ class SimpleMap extends Component {
       lng: -123.297833
     },
     zoom: 11,
-    googleKey: 'AIzaSyAClGrq3Fis5pbVoup9QirieFK0z6VROQA'
+    googleKey: 'string'
   };
 
 
