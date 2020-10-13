@@ -36,12 +36,12 @@ export default function Services({location}) {
                     <h4>Call us for more information</h4>
                     <p className="h3 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
                     {/* <Map /> */}
-                    <SimpleMap />
                     <div className="address_section">
                         <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />
                         2562 Sinclair Road<br />
                         Victoria V8N 1B8</p>
                     </div>
+                    <SimpleMap />
                 </article>
             </div>
         </Layout>
