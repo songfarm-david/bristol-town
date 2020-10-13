@@ -9,11 +9,9 @@ export default function BackToTop() {
 
     const [btnVisible, togglebtnVisible] = useState(false);
     useEffect(() => {
-        const scrollTest = () => {
-            const y = (window.scrollY > 200) ? 
+        const scrollTest = () => (window.scrollY > 200) ? 
             togglebtnVisible(true)  : 
             togglebtnVisible(false)
-        }
         window.addEventListener('scroll', scrollTest)
     }, [btnVisible])
 

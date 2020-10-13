@@ -1,12 +1,13 @@
 import React from "react"
-import Map from "../components/UI/map"
+// import Map from "../components/UI/map"
+import SimpleMap from "../components/UI/map_2"
 import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
 
 import "../styles/form.scss"
 
 export default function Services({location}) {
-    console.log(location);
+
     return (
         <Layout page={location} pageTitle={"Contact Us"}>
             <p className="text_italic">Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
@@ -34,7 +35,8 @@ export default function Services({location}) {
                 <article className="center">
                     <h4>Call us for more information</h4>
                     <p className="h3 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
-                    <Map />
+                    {/* <Map /> */}
+                    <SimpleMap />
                     <div className="address_section">
                         <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />
                         2562 Sinclair Road<br />

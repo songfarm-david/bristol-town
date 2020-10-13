@@ -287,7 +287,7 @@ h4,
 .grid_section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     div > p {
         margin-top: 0;
     }
@@ -314,7 +314,7 @@ h4,
 
 .address_section {
     text-align: left;
-    padding: 0 1rem;
+    // padding: 0 1rem;
     font-size: $font_reg;
     font-family: $sans_serif_font;
     p {

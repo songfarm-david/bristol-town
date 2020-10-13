@@ -16,7 +16,7 @@ export default function Layout ({ children, page, pageTitle }) {
             <Header />
             {(page.pathname === "/") ? 
                 <MainSlider /> :
-                <PageBanner pageTitle={"Welcome to Bristol"} page={page} pageTitle={pageTitle} />
+                <PageBanner page={page} pageTitle={pageTitle} />
             }
 
             <main role="main">
