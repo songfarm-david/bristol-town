@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "./brand_banner.scss"
-import ThemeButton from "./theme_button"
+import ThemeButton from "../UI/theme_button"
 
 export default function BrandBanner() {
     const brandImage = useStaticQuery(
@@ -29,14 +29,14 @@ export default function BrandBanner() {
 
     return (
         <>
-            <section id="brand_section" style={{padding:'1rem'}}>
+            <section id="brand_section" style={{padding:'1rem 1rem 3rem'}}>
                 {brandImage.allFile.edges.map(({node}, idx) => (
                     <div className="fixed_img_container" key={idx}>
                         <Img className={"fixed_img_container__img"} fluid={node.childImageSharp.fluid} alt={node.name} />
                     </div>
                 ))}
             </section>
-            <ThemeButton className="inverted center" btnText={"Take a virtual tour"} btnTarget="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank" />
+            <ThemeButton className="center" btnText={"Take a virtual tour"} btnTarget="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank" />
         </>
     )
 }

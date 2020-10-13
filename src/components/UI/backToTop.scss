@@ -1,0 +1,30 @@
+@import "../../styles/global.scss";
+
+#toTop {
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    height: $font_larger;
+    width: $font_larger;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 1px 1px 3px 4px $footer_text_alpha;
+    border-radius: 4px;
+    font-size: $font_larger;
+    padding: $font_larger;
+    opacity: 1;
+    transition: opacity .25s ease-out;
+    &.hidden {
+        opacity: 0;
+        // visibility: hidden;
+    }
+
+    @media screen and (min-width: $mobile_breakpoint) {
+        display: none;
+    }
+}

@@ -8,12 +8,17 @@
     background-image: url('../../images/services.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    &.contact{
+        background-image: url('../../images/contact_us.jpg');
+        background-position: 75% center;
+    }
     .page_banner__headline {
         text-align: center;
         color: $text_color;
         margin: 0;
         text-transform: uppercase;
         padding: 0 1rem;
+        text-shadow: 1px 1px $background_color;
     }
     &.full_height, &.half_height {
         height: 50vh;

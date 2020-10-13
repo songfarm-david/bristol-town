@@ -14,7 +14,7 @@ export default function Footer () {
                 <div className="flex_parent">
                     <div className="flex_child" id="brand_footer">
                         <img src={siteLogo} alt={"Bristol Town Hair logo"} />   
-                        <p>Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
+                        <p className="text_italic">Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
                     </div>
                     <div className="flex_child" id="icon_box__wrapper">
                         <div className="icon_box__box_container">

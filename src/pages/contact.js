@@ -1,21 +1,61 @@
 import React from "react"
-
+// import Map from "../components/UI/map"
+import SimpleMap from "../components/UI/map_2"
 import Layout from "../components/layout"
+import ThemeButton from "../components/UI/theme_button"
+
+import "../styles/form.scss"
 
 export default function Services({location}) {
-    console.log(location);
+
     return (
         <Layout page={location} pageTitle={"Contact Us"}>
-            <section>
-                <h3>Hair Care & Style</h3>
-                <p>Bristol Town’s superior service comes from years of experience. We offer many kinds of styling services, from precision cutting to advanced colouring for your hue needs.</p>
-                <ul>
-                    <li>Haircuts</li>
-                    <li>Color & Correction</li>
-                    <li>Perms</li>
-                    <li>Blowdry</li>
-                </ul>
-            </section>
+            <p className="text_italic">Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
+            <div className="grid_section">
+                <section>
+                    <h3>Make an appointment</h3>
+                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="contact" />
+                        <label className="form_label" htmlFor="name">Name
+                            <input type="input" name="name" aria-label="name" />
+                        </label>
+                        <label className="form_label" htmlFor="email">Email
+                            <input type="email" name="email" aria-label="email" required />
+                        </label>
+                        <label className="form_label" htmlFor="subject">Subject
+                            <input type="input" name="subject" aria-label="subject" required/>
+                        </label>
+                        <label className="form_label">Message
+                            <textarea rows="14" name="comment" aria-label="comment"></textarea>
+                        </label>
+                        <ThemeButton className="center" type="submit" btnText="Send" />
+                    </form>
+                </section>
+                <article className="center">
+                    <h4>Call us for more information</h4>
+                    <p className="h3 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
+                    {/* <Map /> */}
+                    <SimpleMap />
+                    <div className="address_section">
+                        <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />
+                        2562 Sinclair Road<br />
+                        Victoria V8N 1B8</p>
+                    </div>
+                </article>
+            </div>
         </Layout>
     )
 }
+
+export const contactUs = graphql`
+    query {
+        file(name: {eq: "contact_us"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+`

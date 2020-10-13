@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import ThemeButton from "../components/theme/theme_button"
+import ThemeButton from "../components/UI/theme_button"
 
 export default ({location}) => {
     console.log(location);

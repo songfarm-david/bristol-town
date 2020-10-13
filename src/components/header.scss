@@ -1,0 +1,38 @@
+@import "../styles/global.scss";
+
+#main_header {
+    background-color: $background_color;
+    color: $text_color;
+    padding: 1rem;
+    position: relative;
+    z-index: 101;
+    .flex_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    @media screen and (min-width: $mobile_breakpoint) {
+        position: absolute;
+        width: 100%;
+        background-color: unset;
+        // animation: animateHeader .5s ease-out;
+        &.floating_header {
+            position: fixed;
+            top: 0;
+            background-color: $background_color;
+            animation: animateHeader .49s ease-out;
+            z-index: 111;
+        }
+    }
+}
+
+@keyframes animateHeader {
+    0% {
+    //   transform: translateY(-1000%);
+      opacity: 0;
+    }
+    100% {
+    //   transform: translateY(0);
+      opacity: 1;
+    }
+}
