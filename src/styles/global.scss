@@ -110,19 +110,12 @@ h4,
     
 }
 
-// #main_header,
-// #main_footer {
-//     background-color: $background_color;
-//     color: $text_color;
-// }
-
-
-
 #main_navigation {
     position: absolute;
     top: 0px;
     left: 0px;
     bottom: 0px;
+    z-index: 111;
     transform: translateX(-150%);
     background-color: $background_color;
     color: $text_color;

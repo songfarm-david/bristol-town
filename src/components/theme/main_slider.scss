@@ -38,5 +38,15 @@
         // position: relative;
         z-index: 12;
         background-color: transparent;
+        padding: 0 1rem;
+        > h1 {
+            font-size: $h2_header;
+
+        }
+        @media screen and (min-width: $mobile_breakpoint) {
+            > h1 {
+                font-size: $h1_header;    
+            }
+        }
     }
 }
