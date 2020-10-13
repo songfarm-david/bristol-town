@@ -15,7 +15,10 @@ export default function Home({location}) {
                 </div>
                 <div className={"button_group"}>
                     <ThemeButton />
-                    <ThemeButton className="inverted" btnText="See our services" />
+                    <ThemeButton 
+                        className="inverted" 
+                        btnTarget="/services/"
+                        btnText="See our services" />
                 </div>
             </section>
             <BrandBanner />

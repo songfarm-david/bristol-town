@@ -33,8 +33,13 @@ export default function Services({location}) {
                 </section>
                 <article className="center">
                     <h3>Call us for more information</h3>
-                    <p className="h2" style={{marginTop:'0'}}>(250) 477-3098</p>
+                    <p className="h2 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
                     <Map />
+                    <div className="address_section">
+                        <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />
+                        2562 Sinclair Road<br />
+                        Victoria V8N 1B8</p>
+                    </div>
                 </article>
             </div>
         </Layout>

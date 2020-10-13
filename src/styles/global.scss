@@ -298,6 +298,19 @@ h3,
     max-width: 30rem;
 }
 
+.sans_serif {
+    font-family: $sans_serif_font;
+}
+
+.address_section {
+    text-align: left;
+    padding: 0 1rem;
+    font-size: $font_reg;
+    > * {
+        font-size: inherit;
+    }
+}
+
 /**
  * Helper Classes 
  */
