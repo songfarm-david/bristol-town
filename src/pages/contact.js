@@ -32,8 +32,8 @@ export default function Services({location}) {
                     </form>
                 </section>
                 <article className="center">
-                    <h3>Call us for more information</h3>
-                    <p className="h2 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
+                    <h4>Call us for more information</h4>
+                    <p className="h3 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
                     <Map />
                     <div className="address_section">
                         <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />

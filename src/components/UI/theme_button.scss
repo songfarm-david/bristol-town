@@ -15,6 +15,7 @@
     &.inverted {
         background-color: unset;
         color: $background_color;
+        font-size: $font_reg;
         > a {
             border: 1px solid #fff;
             &:hover,

@@ -1,6 +1,7 @@
 import React from "react"
 
 import Header from "./header"
+import MainSlider from "../components/theme/main_slider"
 import PageBanner from "../components/theme/page__banner"
 import CtaBanner from "../components/theme/cta_banner"
 import BackToTop from "../components/UI/backToTop"
@@ -13,7 +14,11 @@ export default function Layout ({ children, page, pageTitle }) {
     return (
         <>
             <Header />
-            <PageBanner pageTitle={"Welcome to Bristol"} page={page} pageTitle={pageTitle} />
+            {(page.pathname === "/") ? 
+                <MainSlider /> :
+                <PageBanner pageTitle={"Welcome to Bristol"} page={page} pageTitle={pageTitle} />
+            }
+
             <main role="main">
                 <div className="section_inner">
                     {children}

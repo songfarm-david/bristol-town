@@ -72,7 +72,7 @@ main {
     }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $sans_serif_font;
     text-transform: uppercase;
 }
@@ -91,6 +91,11 @@ h3,
     font-size: $h3_header;
 }
 
+h4,
+.h4 {
+    font-size: $font_larger;
+}
+
 @media screen and (min-width: $mobile_breakpoint) {
     .section_inner {
         margin: 0 auto;
@@ -101,7 +106,8 @@ h3,
 }
 
 .section_padding_mobile {
-    padding: $section_padding
+    padding: $section_padding;
+    
 }
 
 // #main_header,
@@ -137,6 +143,7 @@ h3,
         display: block;
         padding: 1rem;
         border-bottom: 1px solid $footer_text_alpha;
+        font-size: $font_reg;
         a {
             color: inherit;
             text-decoration: none;
@@ -184,7 +191,7 @@ h3,
     .icon_box__title {
         text-transform: uppercase;
         font-weight: lighter;
-        font-size: $font_small;
+        font-size: $font_reg;
     }
 
     .icon_box__description {
@@ -281,6 +288,9 @@ h3,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 1rem;
+    div > p {
+        margin-top: 0;
+    }
 }
 
 .button_group {
@@ -306,6 +316,10 @@ h3,
     text-align: left;
     padding: 0 1rem;
     font-size: $font_reg;
+    font-family: $sans_serif_font;
+    p {
+        font-family: inherit;
+    }
     > * {
         font-size: inherit;
     }

@@ -4,6 +4,8 @@
     background-color: $background_color;
     color: $text_color;
     padding: 1rem;
+    position: relative;
+    z-index: 101;
     .flex_inner {
         display: flex;
         align-items: center;
