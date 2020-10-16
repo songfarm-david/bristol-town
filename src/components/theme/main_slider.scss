@@ -1,12 +1,6 @@
 @import "../../styles/global.scss";
 @import "../../../node_modules/react-slideshow-image/dist/styles.css";
 
-// .slide-container {
-//     height: 100vh;
-
-// }
-
-
 #mainSlider {
     position: relative;
     z-index: 10;
@@ -25,7 +19,7 @@
     #overlay {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
-        background-color: rgba(0,0,0,.3);
+        background-color: rgba(0,0,0,.4);
         z-index: 11;
     }
     .slide-container .slide-container_header {
@@ -35,13 +29,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // position: relative;
         z-index: 12;
         background-color: transparent;
         padding: 0 1rem;
         > h1 {
             font-size: $h2_header;
-
         }
         @media screen and (min-width: $mobile_breakpoint) {
             > h1 {

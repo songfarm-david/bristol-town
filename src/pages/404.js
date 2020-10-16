@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
 
 export default ({location}) => {
-    console.log(location);
+
     return (
         <Layout page={location} pageTitle={"Page not found"}>
             <section className="center">

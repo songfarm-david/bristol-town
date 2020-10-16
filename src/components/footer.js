@@ -19,7 +19,6 @@ export default function Footer () {
                     <div className="flex_child" id="icon_box__wrapper">
                         <div className="icon_box__box_container">
                             <div className="icon_box__icon_wrapper">
-                                {/* <i className="icon_box__icon"></i> */}
                                 <FontAwesomeIcon icon={faPhone} className="fa_icon" />
                             </div>
                             <div className="icon_box__content">
@@ -57,6 +56,8 @@ export default function Footer () {
                             <li><Link to="/services">Services</Link></li>
                             <li><a href="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank">Virtual Tour</a></li>
                             <li><Link to="/contact">Contact Us</Link></li>
+                            <li><a href="https://www.facebook.com/bristoltownvictoria/" target="blank">Social Media</a></li>
+                            <li><Link to="/privacy">Privacy Policy</Link></li>
                         </ul>
                     </div>
                 </div>
