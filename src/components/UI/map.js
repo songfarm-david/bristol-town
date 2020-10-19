@@ -16,7 +16,7 @@ export default function MapBox() {
             }
         }
     `)
-    const googleKey = { key: process.env.GoogleMapKey }
+    const googleKey = { key: process.env.GATSBY_GoogleMapKey }
     const location = {
         address: '2562 Sinclair Rd, Victoria, BC V8N 1B8',
         lat: 48.461470,
@@ -42,8 +42,7 @@ export default function MapBox() {
                 defaultCenter={location}
                 defaultZoom={zoom}
                 yesIWantToUseGoogleMapApiInternals
-                onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-                >
+                onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}>
                 <AnyReactComponent
                     lat={location.lat}
                     lng={location.lng} />
