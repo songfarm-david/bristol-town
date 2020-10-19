@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
 import BrandBanner from "../components/theme/brand_banner"
+import Carousel from "../components/UI/gallery"
 
 export default function Home({location}) {
 
@@ -22,6 +23,7 @@ export default function Home({location}) {
                 </div>
             </section>
             <BrandBanner />
+            <Carousel />
         </Layout>
     )
 }

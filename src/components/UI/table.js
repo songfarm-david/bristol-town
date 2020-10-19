@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Table({tableHeader, tableContent = {}}) {
-    console.log(tableContent);
     return (
         <table>
             <thead>
@@ -16,7 +15,6 @@ export default function Table({tableHeader, tableContent = {}}) {
                         <td>{node.price}</td>
                     </tr>
                 ))}
-                
             </tbody>
         </table>
     )

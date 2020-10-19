@@ -6,8 +6,7 @@ import Layout from "../components/layout"
 import Tabbed from "../components/UI/tabs"
 
 export default function Services({location, data}) {
-    // console.log(location);
-    console.log(data);
+
     return (
         <Layout page={location} pageTitle={"Services"}>
             <section className="grid_section">

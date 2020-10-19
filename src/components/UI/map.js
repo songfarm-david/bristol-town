@@ -33,8 +33,7 @@ export default function MapBox({ data }) {
                 <AnyReactComponent
                     lat={center.lat}
                     lng={center.lng}
-                    text={siteMetadata.site.siteMetadata.title}
-                />
+                    text={siteMetadata.site.siteMetadata.title} />
                 </GoogleMapReact>
             </div>
         </article>

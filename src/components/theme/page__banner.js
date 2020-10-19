@@ -8,9 +8,10 @@ export default function PageBanner({ page, pageTitle }) {
 
     return (
         <section id="page_banner" className={bannerClass + " " + str}>
-            <div>
+            <div className="page_banner__headline_wrap">
                 <h2 className="page_banner__headline">{pageTitle}</h2>
             </div>
+            <div id="banner_overlay"></div>
         </section>
     )
 }

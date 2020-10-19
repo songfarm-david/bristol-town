@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
@@ -13,14 +13,15 @@ export default function BackToTop() {
             togglebtnVisible(true)  : 
             togglebtnVisible(false)
         window.addEventListener('scroll', scrollTest)
+        return () => window.removeEventListener('scroll', scrollTest)
     }, [btnVisible])
 
-    const scrollFunc = () => {
+    const scrollFunc = useCallback(() => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         })
-    }
+    }, [])
 
     return (
         <button id="toTop" title="Back to top" 

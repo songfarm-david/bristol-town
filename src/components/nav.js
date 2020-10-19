@@ -8,9 +8,11 @@ const Nav = ({ menuToggleClass }) => (
         <h2 className="screen_reader_text">Main Navigation</h2>
         <ul>
             <li><Link to="/services">Services</Link></li>
-            {/* <li><a href="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank">Virtual Tour</a></li> */}
+            {/* <li><a href="#imgGallery">Gallery</a></li> */}
+            <li><Link to="/#imgGallery">Gallery</Link></li>
+
             <li><Link to="/contact">Make an Appointment</Link></li>
-            <a title="Call us" href="tel:+12504773098"><FontAwesomeIcon icon={faPhone} className="fa_icon" /></a>
+            <li><a title="Call us" href="tel:+12504773098" aria-label="call us"><FontAwesomeIcon icon={faPhone} className="fa_icon" /></a></li>
 
         </ul>
     </nav>

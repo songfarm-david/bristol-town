@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import "./brand_banner.scss"
-import ThemeButton from "../UI/theme_button"
 
 export default function BrandBanner() {
     const brandImage = useStaticQuery(
@@ -36,7 +35,6 @@ export default function BrandBanner() {
                     </div>
                 ))}
             </section>
-            <ThemeButton className="center" btnText={"Take a virtual tour"} btnTarget="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank" />
         </>
     )
 }

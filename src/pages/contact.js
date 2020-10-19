@@ -1,6 +1,7 @@
 import React from "react"
+import { graphql } from "gatsby"
 // import Map from "../components/UI/map"
-import SimpleMap from "../components/UI/map_2"
+// import SimpleMap from "../components/UI/map_2"
 import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
 

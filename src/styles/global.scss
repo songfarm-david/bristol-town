@@ -31,6 +31,13 @@ html {
     scroll-behavior: smooth;
 }
 
+.overlay_class {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 11;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -126,7 +133,7 @@ h4,
     &.menu-active {
         transform: translateX(0);
         transition: transform .75s ease;
-        z-index: 111;
+        z-index: 1111;
     }
     ul {
         list-style-type: none;

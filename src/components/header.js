@@ -18,6 +18,7 @@ export default function Header() {
             toggleFloatingHeader(true)  : 
             toggleFloatingHeader(false)
         window.addEventListener('scroll', testScroll)
+        return window.removeEventListener('scroll', testScroll)
     }, [isFloatingHeader])
 
     return (

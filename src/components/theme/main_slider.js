@@ -31,7 +31,6 @@ export default function MainSlider() {
         }
     `)
 
-        console.log(slideImages);
     return (
         <div id="mainSlider">
             <div className="slide-container">
