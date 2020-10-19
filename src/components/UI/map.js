@@ -16,7 +16,7 @@ export default function MapBox() {
             }
         }
     `)
-    const googleKey = { key: process.env.GATSBY_GoogleMapKey }
+    const googleKey = { key: `${process.env.GATSBY_GoogleMapKey}` }
     const location = {
         address: '2562 Sinclair Rd, Victoria, BC V8N 1B8',
         lat: 48.461470,
