@@ -130,10 +130,11 @@ h4,
     border-right: 2px solid $footer_text;
     text-transform: uppercase;
     font-family: $sans_serif_font;
+    z-index: 1111;
     &.menu-active {
         transform: translateX(0);
         transition: transform .75s ease;
-        z-index: 1111;
+        // z-index: 1111;
     }
     ul {
         list-style-type: none;

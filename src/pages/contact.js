@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import Map from "../components/UI/map"
+import Map from "../components/UI/map"
 // import SimpleMap from "../components/UI/map_2"
 import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
@@ -36,13 +36,13 @@ export default function Services({location}) {
                 <article className="center">
                     <h4>Call us for more information</h4>
                     <p className="h3 sans_serif" style={{marginTop:'0'}}>(250) 477-3098</p>
-                    {/* <Map /> */}
+                    <Map />
                     <div className="address_section">
                         <p className="align_left"><strong>Bristol Town Hair Fashions</strong><br />
                         2562 Sinclair Road<br />
                         Victoria V8N 1B8</p>
                     </div>
-                    <SimpleMap />
+                    {/* <SimpleMap /> */}
                 </article>
             </div>
         </Layout>
