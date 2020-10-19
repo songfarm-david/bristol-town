@@ -18,8 +18,8 @@ export default function Header() {
             toggleFloatingHeader(true)  : 
             toggleFloatingHeader(false)
         window.addEventListener('scroll', testScroll)
-        return window.removeEventListener('scroll', testScroll)
-    }, [isFloatingHeader])
+        return () => window.removeEventListener('scroll', testScroll)
+    }, [])
 
     return (
         <header id={"main_header"} className={(isFloatingHeader) ? "floating_header" : ""}>

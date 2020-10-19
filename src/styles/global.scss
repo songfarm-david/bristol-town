@@ -27,6 +27,10 @@ $font_small: 0.667rem;
     box-sizing: border-box;
 }
 
+svg {
+    max-height: 1rem;
+}
+
 html {
     scroll-behavior: smooth;
 }
