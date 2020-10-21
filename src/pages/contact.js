@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Map from "../components/UI/map"
-// import SimpleMap from "../components/UI/map_2"
 import Layout from "../components/layout"
 import ThemeButton from "../components/UI/theme_button"
 
@@ -15,22 +14,23 @@ export default function Services({location}) {
             <div className="grid_section">
                 <section>
                     <h3>Make an appointment</h3>
-                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                    <form method="POST" content-type="application/x-www-form-urlencoded" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
                         <label className="form_label" htmlFor="name">Name
-                            <input type="input" name="name" aria-label="name" />
+                            <input type="input" name="name" aria-label="name" required />
                         </label>
                         <label className="form_label" htmlFor="email">Email
                             <input type="email" name="email" aria-label="email" required />
                         </label>
                         <label className="form_label" htmlFor="subject">Subject
-                            <input type="input" name="subject" aria-label="subject" required/>
+                            <input type="input" name="subject" aria-label="subject" />
                         </label>
                         <label className="form_label">Message
                             <textarea rows="14" name="comment" aria-label="comment"></textarea>
                         </label>
-                        <ThemeButton className="center" type="submit" btnText="Send" />
+                        <button type="submit" className="theme_button center">Send</button>
+                        {/* <ThemeButton className="center" type="submit" btnText="Send" /> */}
                     </form>
                 </section>
                 <article className="center">
@@ -42,7 +42,6 @@ export default function Services({location}) {
                         2562 Sinclair Road<br />
                         Victoria V8N 1B8</p>
                     </div>
-                    {/* <SimpleMap /> */}
                 </article>
             </div>
         </Layout>
