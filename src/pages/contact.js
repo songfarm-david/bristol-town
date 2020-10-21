@@ -29,7 +29,7 @@ export default function Services({location}) {
                         <label className="form_label">Message
                             <textarea rows="14" name="comment" aria-label="comment"></textarea>
                         </label>
-                        <button type="submit" className="theme_button center">Send</button>
+                        <button type="submit" className="theme_button__form">Send</button>
                         {/* <ThemeButton className="center" type="submit" btnText="Send" /> */}
                     </form>
                 </section>

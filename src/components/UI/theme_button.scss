@@ -62,13 +62,3 @@ button.theme_button,
         }
     }
 }
-
-button.theme_button {
-    display: block;
-    padding: 1rem;
-    transition: background-color .25s;
-    &:hover {
-        background-color: $theme_color;
-        cursor: pointer;
-    }
-}
