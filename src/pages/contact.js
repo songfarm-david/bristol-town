@@ -29,6 +29,7 @@ export default function Services({location}) {
                         <label className="form_label">Message
                             <textarea rows="14" name="comment" aria-label="comment"></textarea>
                         </label>
+                        <div data-netlify-recaptcha="true"></div>
                         <button type="submit" className="theme_button__form">Send</button>
                         {/* <ThemeButton className="center" type="submit" btnText="Send" /> */}
                     </form>
