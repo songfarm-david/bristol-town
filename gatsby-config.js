@@ -37,7 +37,15 @@ module.exports = {
               ],
               display: 'swap'
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              trackingIds: [
+                process.env.GA, // Google Analytics / GA
+              ]
+            },
+          }
         // ,
         // {
         //     resolve: `@ccalamos/gatsby-source-googlemaps-static`,
