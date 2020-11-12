@@ -1,11 +1,14 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default ({location}) => {
 
     return (
         <Layout page={location} pageTitle={"Privacy Policy"}>
+            <SEO title="Privacy Policy | Bristol Town Hair Fashions | Victoria BC"
+                description="Read our privacy policy to learn how we protect your information on our site." />
             <section className="center">
             <p>The privacy of our visitors to Bristol Town Hair Fashions is important to us.</p>
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 import Tabbed from "../components/UI/tabs"
@@ -9,6 +10,8 @@ export default function Services({location, data}) {
 
     return (
         <Layout page={location} pageTitle={"Services"}>
+            <SEO title="Services | Bristol Town Hair Fashions | Victoria BC"
+                description="Haircuts for women, men and children including colour & correction, perms, blowdrys, and expert hair styling in Victoria, BC. Book an appointment today!" />
             <section className="grid_section">
                 <div>
                     <Img fluid={data.file.childImageSharp.fluid} className="page_img" />

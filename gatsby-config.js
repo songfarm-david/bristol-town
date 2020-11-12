@@ -11,12 +11,16 @@ require('dotenv').config({
 module.exports = {
     siteMetadata: {
         title: "Bristol Town Hair Fashions",
+        titleTemplate: "%s · Bristol Town Hair Fashions",
         description: "We Style Your Hair With Years of Experience",
+        url: "https://bristoltown.ca",
+        image: "/images/bristol_hair_logo.png"
     },
     plugins: [
         `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`, 
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

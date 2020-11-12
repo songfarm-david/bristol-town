@@ -5,10 +5,13 @@ import ThemeButton from "../components/UI/theme_button"
 import BrandBanner from "../components/theme/brand_banner"
 import Carousel from "../components/UI/gallery"
 
+import SEO from "../components/seo"
+
 export default function Home({location}) {
 
     return (
         <Layout page={location} pageTitle={"Welcome to Bristol Town"}>
+            <SEO />
             <h2>We Style Your Hair With Years of Experience</h2>
             <section className={"grid_section"}>
                 <div>

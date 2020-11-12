@@ -2,7 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Map from "../components/UI/map"
 import Layout from "../components/layout"
-import ThemeButton from "../components/UI/theme_button"
+// import ThemeButton from "../components/UI/theme_button"
+import SEO from "../components/seo"
 
 import "../styles/form.scss"
 
@@ -10,6 +11,8 @@ export default function Services({location}) {
 
     return (
         <Layout page={location} pageTitle={"Contact Us"}>
+            <SEO title="Contact Us | Bristol Town Hair Fashions | Victoria BC"
+                description="Contact us today to book an appointment! Hair stylists available for men, women and children. Contact us today!" />
             <p className="text_italic">Bristol Town Hair Fashions is the place to come if you want an amazing haircut that is the style you’ve always wanted. Look and feel your best, we service women, men and children.</p>
             <div className="grid_section">
                 <section>
