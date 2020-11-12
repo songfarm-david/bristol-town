@@ -17,7 +17,9 @@ const SEO = ({ title, description, image, article }) => {
         defaultImage,
         phoneNumber,
         streetAddress,
-        postalCode
+        postalCode,
+        author,
+        siteLanguage
     } = site.siteMetadata
 
     const seo = {
@@ -28,6 +30,7 @@ const SEO = ({ title, description, image, article }) => {
     }
 
     // Schema
+    // local business
     const schemaLocalBusiness = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -45,6 +48,24 @@ const SEO = ({ title, description, image, article }) => {
         }
     }
 
+    const schemaWebPage = {
+        '@context': 'http://schema.org',
+        '@type': 'WebPage',
+        url: siteUrl,
+        inLanguage: siteLanguage,
+        mainEntityOfPage: siteUrl,
+        description: defaultDescription,
+        name: defaultTitle,
+        author: {
+            '@type': 'Person',
+            name: author,
+        },
+        image: {
+            '@type': 'ImageObject',
+            url: defaultImage,
+        },
+    }
+
     return (
         <Helmet title={seo.title}>
             <meta charSet="utf-8" />
@@ -57,6 +78,7 @@ const SEO = ({ title, description, image, article }) => {
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
             <script type="application/ld+json">{JSON.stringify(schemaLocalBusiness)}</script>
+            <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
         </Helmet>
     )
 }
@@ -88,6 +110,8 @@ const query = graphql`
                 phoneNumber
                 streetAddress
                 postalCode
+                author
+                siteLanguage
             }
         }
     }

@@ -17,8 +17,9 @@ module.exports = {
         image: "/images/bristol_hair_logo.png",
         phoneNumber: "(250) 477-3098",
         streetAddress: "2562 Sinclair Road",
-        postalCode: "V8N 1B8"
-
+        postalCode: "V8N 1B8",
+        author: "Bristol Town Hair Fashions",
+        siteLanguage: "en"
     },
     plugins: [
         `gatsby-plugin-sass`,
