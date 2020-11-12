@@ -14,7 +14,10 @@ const SEO = ({ title, description, image, article }) => {
         titleTemplate,
         defaultDescription,
         siteUrl,
-        defaultImage
+        defaultImage,
+        phoneNumber,
+        streetAddress,
+        postalCode
     } = site.siteMetadata
 
     const seo = {
@@ -22,6 +25,24 @@ const SEO = ({ title, description, image, article }) => {
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname}`,
+    }
+
+    // Schema
+    const schemaLocalBusiness = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": defaultTitle,
+        "image": defaultImage,
+        "@id": siteUrl,
+        "url": siteUrl,
+        "telephone": phoneNumber,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": streetAddress,
+            "addressLocality": "Victoria",
+            "postalCode": postalCode,
+            "addressCountry": "Canada"
+        }
     }
 
     return (
@@ -35,6 +56,7 @@ const SEO = ({ title, description, image, article }) => {
                 <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
+            <script type="application/ld+json">{JSON.stringify(schemaLocalBusiness)}</script>
         </Helmet>
     )
 }
@@ -63,6 +85,9 @@ const query = graphql`
                 defaultDescription: description
                 siteUrl: url
                 defaultImage: image
+                phoneNumber
+                streetAddress
+                postalCode
             }
         }
     }

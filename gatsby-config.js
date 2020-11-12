@@ -14,7 +14,11 @@ module.exports = {
         titleTemplate: "%s · Bristol Town Hair Fashions",
         description: "We Style Your Hair With Years of Experience",
         url: "https://bristoltown.ca",
-        image: "/images/bristol_hair_logo.png"
+        image: "/images/bristol_hair_logo.png",
+        phoneNumber: "(250) 477-3098",
+        streetAddress: "2562 Sinclair Road",
+        postalCode: "V8N 1B8"
+
     },
     plugins: [
         `gatsby-plugin-sass`,
