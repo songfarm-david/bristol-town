@@ -11,7 +11,7 @@ export default function Home({location}) {
 
     return (
         <Layout page={location} pageTitle={"Welcome to Bristol Town"}>
-            <SEO />
+            <SEO title={"Hair Salon Victoria BC | Bristol Town Hair Fashions"} description={"Expert hairdressers in Cadboro Bay/Oak Bay Victoria BC offering a range of talents and specialties to suit your personal style."} />
             <h2>We Style Your Hair With Years of Experience</h2>
             <section className={"grid_section"}>
                 <div>
