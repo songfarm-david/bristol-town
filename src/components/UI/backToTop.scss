@@ -19,6 +19,7 @@
     padding: $font_larger;
     opacity: 1;
     transition: opacity .25s ease-out;
+    z-index: 11;
     &.hidden {
         opacity: 0;
         // visibility: hidden;

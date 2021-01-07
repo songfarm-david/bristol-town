@@ -14,13 +14,12 @@ export default function Header() {
     const [isFloatingHeader, toggleFloatingHeader] = useState(false)
 
     useEffect(() => {
-        const testScroll = () => {
-            const sticky = (window.scrollY > 200) ? 
+        const testScroll = () => (window.scrollY > 200) ? 
             toggleFloatingHeader(true)  : 
             toggleFloatingHeader(false)
-        }
         window.addEventListener('scroll', testScroll)
-    }, [isFloatingHeader])
+        return () => window.removeEventListener('scroll', testScroll)
+    }, [])
 
     return (
         <header id={"main_header"} className={(isFloatingHeader) ? "floating_header" : ""}>
@@ -30,7 +29,7 @@ export default function Header() {
                         <img src={siteLogo} alt={"Bristol Town Hair logo"} />
                         <h1 className="screen_reader_text">Bristol Town Hair</h1>
                     </Link>
-                    <div onClick={() => toggleIsOpen( isOpen => !isOpen )}>
+                    <div role="button" tabIndex="0" onClick={() => toggleIsOpen( isOpen => !isOpen )} onKeyDown={() => toggleIsOpen( isOpen => !isOpen )}>
                         <Hamburger isActive={ isOpen } />
                         <Nav menuToggleClass={( isOpen ) ? 'menu-active' : ""} />
                     </div>

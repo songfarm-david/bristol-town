@@ -8,9 +8,17 @@
     background-image: url('../../images/services.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    #banner_overlay {
+        @extend .overlay_class;
+    }
+
     &.contact{
         background-image: url('../../images/contact_us.jpg');
         background-position: 75% center;
+    }
+    .page_banner__headline_wrap {
+        z-index: 111;
     }
     .page_banner__headline {
         text-align: center;
@@ -22,6 +30,7 @@
     }
     &.full_height, &.half_height {
         height: 50vh;
+        position: relative;
     }
     @media screen and (min-width: $mobile-breakpoint) {
         &.full_height {

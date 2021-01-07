@@ -4,6 +4,7 @@
     background-color: $background_color;
     color: $text_color;
     padding: 1rem;
+    position: static;
     .flex_inner {
         display: flex;
         align-items: center;
@@ -13,6 +14,7 @@
         position: absolute;
         width: 100%;
         background-color: unset;
+        z-index: 101;
         // animation: animateHeader .5s ease-out;
         &.floating_header {
             position: fixed;

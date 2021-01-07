@@ -1,7 +1,8 @@
 @import "../../styles/global.scss";
 
+button.theme_button,
 .theme_button {
-    max-width: 20rem;
+    max-width: 23rem;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -15,6 +16,7 @@
     &.inverted {
         background-color: unset;
         color: $background_color;
+        font-size: $font_reg;
         > a {
             border: 1px solid #fff;
             &:hover,
@@ -56,6 +58,7 @@
         transition: background-color .25s;
         &:hover {
             background-color: $theme_color;
+            cursor: pointer;
         }
     }
 }
