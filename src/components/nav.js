@@ -9,9 +9,9 @@ const Nav = ({ menuToggleClass }) => (
         <ul>
             <li>
                 <Link to="/services">Services</Link>
-                {/* <ul>
+                <ul>
                     <li><Link to="/hair-colouring">Hair Colouring</Link></li>
-                </ul> */}
+                </ul>
             </li>
             <li><Link to="/#imgGallery">Gallery</Link></li>
             <li><Link to="/contact">Make an Appointment</Link></li>

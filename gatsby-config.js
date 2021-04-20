@@ -50,15 +50,6 @@ module.exports = {
                 process.env.GA, // Google Analytics / GA
               ]
             },
-          }
-        // ,
-        // {
-        //     resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-        //     options: {
-        //         key: process.env.GOOGLE_MAPS_KEY,
-        //         center: `48.461470,-123.297833 || Victoria, British Columbia`,
-        //         nickname: 'Bristol Town Hair Fashions'
-        //     },
-        // }
+        }
     ],
 }

@@ -19,7 +19,7 @@ export default function Services({location, data}) {
                 <div>
                     <h3>Hair Care & Style</h3>
                     <p className={"text_italic"}>Bristol Town’s superior service comes from years of experience. We offer many kinds of styling services, from precision cutting to advanced colouring for your hue needs.</p>
-                    <Table />
+                    {/* <Table /> */}
                 </div>
             </section>
             
