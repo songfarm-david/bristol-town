@@ -54,7 +54,7 @@ export default function Footer () {
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/services">Services</Link></li>
-                            <li><a href="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank">Virtual Tour</a></li>
+                            {/* <li><a href="https://my.matterport.com/show/?m=P8KFYtiK6J8" target="blank">Virtual Tour</a></li> */}
                             <li><Link to="/contact">Contact Us</Link></li>
                             <li><a href="https://www.facebook.com/bristoltownvictoria/" target="blank">Social Media</a></li>
                             <li><Link to="/privacy">Privacy Policy</Link></li>
