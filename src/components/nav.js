@@ -7,9 +7,9 @@ const Nav = ({ menuToggleClass }) => (
     <nav role="navigation" id="main_navigation" className={ menuToggleClass }>
         <h2 className="screen_reader_text">Main Navigation</h2>
         <ul>
-            <li>
+            <li className={"has-children"}>
                 <Link to="/services">Services</Link>
-                <ul>
+                <ul className={"dropdown-menu"}>
                     <li><Link to="/hair-colouring">Hair Colouring</Link></li>
                 </ul>
             </li>
