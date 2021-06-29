@@ -3,8 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ImageGallery from 'react-image-gallery';
 import ThemeButton from "../UI/theme_button"
 
-            
-
+        
 // https://www.npmjs.com/package/react-image-gallery
 import "./gallery.scss"
 
@@ -42,12 +41,12 @@ export default function Carousel() {
                 autoPlay={true} 
                 slideDuration={500} 
                 slideInterval={5000} />
-            <ThemeButton 
+            {/* <ThemeButton 
                 className="center" 
                 btnText={"Take a virtual tour"} 
                 btnTarget="https://my.matterport.com/show/?m=P8KFYtiK6J8"
                 target="blank"
-                style={{marginTop: '2rem'}} />
+                style={{marginTop: '2rem'}} /> */}
         </section>
        
      )
