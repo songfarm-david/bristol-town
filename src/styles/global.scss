@@ -166,6 +166,8 @@ h4,
     ul {
         list-style-type: none;
         padding: 2rem;
+        position: relative;
+        display: inline-block;
     }
     li {
         display: block;
@@ -183,6 +185,14 @@ h4,
                 color: $footer_text;
             }
         }
+        & .dropdown-menu {
+            display: block;
+            padding: 0;
+            margin-top: 1rem;
+            li {
+                border-bottom-width: 0px ;
+            }
+        }
     }
     @media screen and (min-width: $mobile_breakpoint) {
         position: relative;
@@ -197,6 +207,22 @@ h4,
             display: inline-block;
             padding: 1rem;
             border: none;
+            &.has-children {
+                &:hover {
+                    .dropdown-menu {
+                        display: block;
+                    }
+                }
+            }
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: $text_color;
+                min-width: 160px;
+                color: $background_color;
+                z-index: 1;
+                
+            }
         }
     }
 }
